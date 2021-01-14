@@ -1,0 +1,2 @@
+vhdl work "sine_gen.vhd"
+vhdl work "sine_top.vhd"

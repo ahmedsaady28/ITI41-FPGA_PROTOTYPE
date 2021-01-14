@@ -1,0 +1,37 @@
+06:45:37 **** Incremental Build of configuration Debug for project sine_final_lock ****
+make all 
+make: Nothing to be done for `all'.
+12:15:40 **** Auto Build of configuration Debug for project sine_final_lock ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../sine_final_lock_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:66:9: warning: variable 'out' set but not used [-Wunused-but-set-variable]
+../src/helloworld.c:64:41: warning: unused variable 'correct_code' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: sine_final_lock.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../sine_final_lock_bsp/microblaze_0/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "sine_final_lock.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: sine_final_lock.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size sine_final_lock.elf  |tee "sine_final_lock.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5538	    272	   2086	   7896	   1ed8	sine_final_lock.elf
+'Finished building: sine_final_lock.elf.size'
+' '
+'Invoking: Xilinx ELF Check'
+elfcheck sine_final_lock.elf -hw ../../Final_3_hw_platform/system.xml -pe microblaze_0  |tee "sine_final_lock.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../Final_3_hw_platform/system.xml -pe microblaze_0
+sine_final_lock.elf 
+
+ELF file	: sine_final_lock.elf
+elfcheck passed.
+'Finished building: sine_final_lock.elf.elfcheck'
+' '

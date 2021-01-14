@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Jan 14 10:07:25 2021
+# Process ID: 9516
+# Current directory: E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Vivado/Sine_final/Sine_final.runs/synth_1
+# Command line: vivado.exe -log sine_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sine_top.tcl
+# Log file: E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Vivado/Sine_final/Sine_final.runs/synth_1/sine_top.vds
+# Journal file: E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Vivado/Sine_final/Sine_final.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source sine_top.tcl -notrace

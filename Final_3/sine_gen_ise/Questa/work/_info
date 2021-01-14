@@ -1,0 +1,177 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/ITI_references/Digital_IC_course/Verilog/Labs/lab1-1
+T_opt
+!s110 1610594395
+VO42JZ80YW5@ij>O_dFXfK3
+04 7 8 work sine_tb behavior 1
+=1-309c23fe03ef-5fffb85a-363-41a4
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1610594943
+V7zC8XoJ73oo>K@A3bMcY10
+04 8 10 work sine_top behavioral 1
+=1-309c23fe03ef-5fffba7f-139-18cc
+R1
+R2
+n@_opt1
+R3
+R0
+Edoor_lock_final
+w1610601108
+Z4 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 dE:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa
+8E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/door_lock_final.vhd
+FE:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/door_lock_final.vhd
+l0
+L6
+VQ;9Io_mzY=9e@P;FBCQBh0
+!s100 ?<00GH@:N5PMAPkEz7z6Y0
+Z8 OL;C;10.7c;67
+32
+!s110 1610601129
+!i10b 1
+!s108 1610601128.000000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/door_lock_final.vhd|
+!s107 E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/door_lock_final.vhd|
+!i113 0
+Z9 o-work work -2002 -explicit
+Z10 tExplicit 1 CvgOpt 0
+Esine_gen
+Z11 w1610588020
+R4
+R5
+R6
+R7
+Z12 8E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_gen.vhd
+Z13 FE:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_gen.vhd
+l0
+L4
+VZAVj3RI;3WX>;SHQB^;8T0
+!s100 z?ibOYg:QTE9MjCgIBWS`3
+R8
+32
+Z14 !s110 1610594379
+!i10b 1
+Z15 !s108 1610594378.000000
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_gen.vhd|
+Z17 !s107 E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_gen.vhd|
+!i113 0
+R9
+R10
+Abehav
+R4
+R5
+R6
+DEx4 work 8 sine_gen 0 22 ZAVj3RI;3WX>;SHQB^;8T0
+l22
+L19
+Vblj6znS0bV:OilgP0;[3f2
+!s100 <dPW@5gBh9j`gFO6@22Q91
+R8
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 0
+R9
+R10
+Esine_tb
+Z18 w1610593557
+R4
+R5
+R6
+R7
+Z19 8E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/Sine_tb.vhd
+Z20 FE:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/Sine_tb.vhd
+l0
+L36
+VDhmkb[]8F:b@iVe`hRC`i3
+!s100 5f;PS3hUaenIcR[5]nL>b2
+R8
+32
+R14
+!i10b 1
+Z21 !s108 1610594379.000000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/Sine_tb.vhd|
+Z23 !s107 E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/Sine_tb.vhd|
+!i113 0
+R9
+R10
+Abehavior
+R4
+R5
+R6
+DEx4 work 7 sine_tb 0 22 Dhmkb[]8F:b@iVe`hRC`i3
+l72
+L39
+VKoXcL]i6oEn9mok`DA;h?1
+!s100 Uk3;Md_=AWzEIk7K[:VZo1
+R8
+32
+R14
+!i10b 1
+R21
+R22
+R23
+!i113 0
+R9
+R10
+Esine_top
+Z24 w1610594934
+R4
+R5
+R6
+R7
+Z25 8E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_top.vhd
+Z26 FE:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_top.vhd
+l0
+L33
+VO^7<CXMF[i[B5@<a^oC991
+!s100 DCf`E8Gb9R>W:<7cG^=Nz0
+R8
+32
+Z27 !s110 1610601111
+!i10b 1
+Z28 !s108 1610601111.000000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_top.vhd|
+Z30 !s107 E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_top.vhd|
+!i113 0
+R9
+R10
+Abehavioral
+R4
+R5
+R6
+DEx4 work 8 sine_top 0 22 O^7<CXMF[i[B5@<a^oC991
+l71
+L48
+V<[0^AO1J_<JDIiKFnUmS[0
+!s100 KN:<ClVA=G`>?Z9>>WOBR2
+R8
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 0
+R9
+R10

@@ -1,0 +1,21 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/sine_gen_ise/sine_top_isim_beh.exe" -prj "E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/sine_gen_ise/sine_top_beh.prj" "work.sine_top" 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Parsing VHDL file "E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/sine_gen_ise/sine_gen.vhd" into library work
+Parsing VHDL file "E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/sine_gen_ise/sine_top.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 160968 KB
+Fuse CPU Usage: 218 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture behav of entity sine_gen [sine_gen_default]
+Compiling architecture behavioral of entity sine_top
+Time Resolution for simulation is 1ps.
+Compiled 6 VHDL Units
+Built simulation executable E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/sine_gen_ise/sine_top_isim_beh.exe
+Fuse Memory Usage: 177436 KB
+Fuse CPU Usage: 280 ms

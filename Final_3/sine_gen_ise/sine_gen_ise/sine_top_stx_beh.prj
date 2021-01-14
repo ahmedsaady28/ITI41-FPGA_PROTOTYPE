@@ -1,0 +1,2 @@
+vhdl isim_temp "sine_gen.vhd"
+vhdl isim_temp "sine_top.vhd"

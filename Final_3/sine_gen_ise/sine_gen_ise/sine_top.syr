@@ -1,0 +1,785 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: sine_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "sine_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "sine_top"
+Output Format                      : NGC
+Target Device                      : xc6slx45t-3-fgg484
+
+---- Source Options
+Top Module Name                    : sine_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "E:\ITI_references\Digital_IC_course\FPGA_prototype\Project\Final_3\sine_gen_ise\sine_gen_ise\sine_gen.vhd" into library work
+Parsing entity <sine_gen>.
+Parsing architecture <behav> of entity <sine_gen>.
+Parsing VHDL file "E:\ITI_references\Digital_IC_course\FPGA_prototype\Project\Final_3\sine_gen_ise\sine_gen_ise\sine_top.vhd" into library work
+Parsing entity <sine_top>.
+Parsing architecture <Behavioral> of entity <sine_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <sine_top> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sine_gen> (architecture <behav>) from library <work>.
+WARNING:HDLCompiler:92 - "E:\ITI_references\Digital_IC_course\FPGA_prototype\Project\Final_3\sine_gen_ise\sine_gen_ise\sine_top.vhd" Line 97: n_waves should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <sine_top>.
+    Related source file is "E:\ITI_references\Digital_IC_course\FPGA_prototype\Project\Final_3\sine_gen_ise\sine_gen_ise\sine_top.vhd".
+    Found 9-bit register for signal <behav.final_tmp>.
+    Found 1-bit register for signal <en_1>.
+    Found 1-bit register for signal <en_2>.
+    Found 32-bit register for signal <behav.n_runs>.
+    Found 9-bit register for signal <final_out>.
+    Found 32-bit register for signal <behav.counter>.
+    Found 32-bit adder for signal <behav.counter[31]_GND_4_o_add_0_OUT> created at line 112.
+    Found 32-bit subtractor for signal <behav.n_runs[31]_GND_4_o_sub_6_OUT<31:0>> created at line 132.
+    Found 32-bit comparator greater for signal <behav.n_runs[31]_GND_4_o_LessThan_5_o> created at line 130
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  84 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  16 Multiplexer(s).
+Unit <sine_top> synthesized.
+
+Synthesizing Unit <sine_gen>.
+    Related source file is "E:\ITI_references\Digital_IC_course\FPGA_prototype\Project\Final_3\sine_gen_ise\sine_gen_ise\sine_gen.vhd".
+    Found 32-bit register for signal <op.y_val>.
+    Found 1-bit register for signal <op.first_sig>.
+    Found 1-bit register for signal <op.count_up>.
+    Found 32-bit register for signal <op.counter>.
+    Found 32-bit register for signal <op.y_step>.
+    Found 9-bit register for signal <out_wave>.
+    Found 1-bit register for signal <end_out>.
+    Found 32-bit register for signal <op.n_steps>.
+    Found 33-bit subtractor for signal <n0066> created at line 70.
+    Found 32-bit adder for signal <op.y_val[31]_op.y_step[31]_add_5_OUT> created at line 61.
+    Found 32-bit adder for signal <op.counter[31]_GND_5_o_add_10_OUT> created at line 71.
+    Found 9-bit comparator greater for signal <f_sine[7]_GND_5_o_LessThan_1_o> created at line 42
+    Found 32-bit comparator greater for signal <GND_5_o_op.n_steps[31]_LessThan_5_o> created at line 55
+    Found 32-bit comparator greater for signal <op.y_val[31]_INV_342_o> created at line 63
+    Found 32-bit comparator lessequal for signal <n0011> created at line 72
+    Found 32-bit comparator equal for signal <op.n_steps[31]_op.counter[31]_equal_32_o> created at line 84
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 140 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  22 Multiplexer(s).
+Unit <sine_gen> synthesized.
+
+Synthesizing Unit <div_8u_8u>.
+    Related source file is "".
+    Found 16-bit adder for signal <n0292> created at line 0.
+    Found 16-bit adder for signal <GND_6_o_b[7]_add_1_OUT> created at line 0.
+    Found 15-bit adder for signal <n0296> created at line 0.
+    Found 15-bit adder for signal <GND_6_o_b[7]_add_3_OUT> created at line 0.
+    Found 14-bit adder for signal <n0300> created at line 0.
+    Found 14-bit adder for signal <GND_6_o_b[7]_add_5_OUT> created at line 0.
+    Found 13-bit adder for signal <n0304> created at line 0.
+    Found 13-bit adder for signal <GND_6_o_b[7]_add_7_OUT> created at line 0.
+    Found 12-bit adder for signal <n0308> created at line 0.
+    Found 12-bit adder for signal <GND_6_o_b[7]_add_9_OUT> created at line 0.
+    Found 11-bit adder for signal <n0312> created at line 0.
+    Found 11-bit adder for signal <GND_6_o_b[7]_add_11_OUT> created at line 0.
+    Found 10-bit adder for signal <n0316> created at line 0.
+    Found 10-bit adder for signal <GND_6_o_b[7]_add_13_OUT> created at line 0.
+    Found 9-bit adder for signal <n0320> created at line 0.
+    Found 9-bit adder for signal <GND_6_o_b[7]_add_15_OUT> created at line 0.
+    Found 16-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 15-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 14-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 13-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 12-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 11-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 10-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 9-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0009> created at line 0
+    Summary:
+	inferred  16 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+	inferred  57 Multiplexer(s).
+Unit <div_8u_8u> synthesized.
+
+Synthesizing Unit <div_11s_9s>.
+    Related source file is "".
+    Found 9-bit subtractor for signal <b[8]_unary_minus_3_OUT> created at line 0.
+    Found 19-bit adder for signal <n0495> created at line 0.
+    Found 19-bit adder for signal <GND_7_o_b[8]_add_7_OUT> created at line 0.
+    Found 18-bit adder for signal <n0499> created at line 0.
+    Found 18-bit adder for signal <GND_7_o_b[8]_add_9_OUT> created at line 0.
+    Found 17-bit adder for signal <n0503> created at line 0.
+    Found 17-bit adder for signal <GND_7_o_b[8]_add_11_OUT> created at line 0.
+    Found 16-bit adder for signal <n0507> created at line 0.
+    Found 16-bit adder for signal <GND_7_o_b[8]_add_13_OUT> created at line 0.
+    Found 15-bit adder for signal <n0511> created at line 0.
+    Found 15-bit adder for signal <GND_7_o_b[8]_add_15_OUT> created at line 0.
+    Found 14-bit adder for signal <n0515> created at line 0.
+    Found 14-bit adder for signal <GND_7_o_b[8]_add_17_OUT> created at line 0.
+    Found 13-bit adder for signal <n0519> created at line 0.
+    Found 13-bit adder for signal <GND_7_o_b[8]_add_19_OUT> created at line 0.
+    Found 12-bit adder for signal <n0523> created at line 0.
+    Found 12-bit adder for signal <GND_7_o_b[8]_add_21_OUT> created at line 0.
+    Found 11-bit adder for signal <n0527> created at line 0.
+    Found 11-bit adder for signal <a[10]_b[8]_add_23_OUT[10:0]> created at line 0.
+    Found 11-bit adder for signal <n0531> created at line 0.
+    Found 11-bit adder for signal <a[10]_GND_7_o_add_25_OUT[10:0]> created at line 0.
+    Found 12-bit adder for signal <GND_7_o_BUS_0001_add_28_OUT[11:0]> created at line 0.
+    Found 20-bit adder for signal <GND_7_o_b[8]_add_5_OUT> created at line 0.
+    Found 20-bit comparator greater for signal <BUS_0001_INV_341_o> created at line 0
+    Found 19-bit comparator greater for signal <BUS_0002_INV_340_o> created at line 0
+    Found 18-bit comparator greater for signal <BUS_0003_INV_339_o> created at line 0
+    Found 17-bit comparator greater for signal <BUS_0004_INV_338_o> created at line 0
+    Found 16-bit comparator greater for signal <BUS_0005_INV_337_o> created at line 0
+    Found 15-bit comparator greater for signal <BUS_0006_INV_336_o> created at line 0
+    Found 14-bit comparator greater for signal <BUS_0007_INV_335_o> created at line 0
+    Found 13-bit comparator greater for signal <BUS_0008_INV_334_o> created at line 0
+    Found 12-bit comparator greater for signal <BUS_0009_INV_333_o> created at line 0
+    Found 11-bit comparator greater for signal <BUS_0010_INV_332_o> created at line 0
+    Found 11-bit comparator greater for signal <BUS_0011_INV_331_o> created at line 0
+    Found 11-bit comparator greater for signal <BUS_0012_INV_330_o> created at line 0
+    Summary:
+	inferred  23 Adder/Subtractor(s).
+	inferred  12 Comparator(s).
+	inferred  93 Multiplexer(s).
+Unit <div_11s_9s> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 86
+ 10-bit adder                                          : 4
+ 11-bit adder                                          : 12
+ 12-bit adder                                          : 10
+ 13-bit adder                                          : 8
+ 14-bit adder                                          : 8
+ 15-bit adder                                          : 8
+ 16-bit adder                                          : 8
+ 17-bit adder                                          : 4
+ 18-bit adder                                          : 4
+ 19-bit adder                                          : 4
+ 20-bit adder                                          : 2
+ 32-bit adder                                          : 5
+ 32-bit subtractor                                     : 1
+ 33-bit subtractor                                     : 2
+ 9-bit adder                                           : 4
+ 9-bit subtractor                                      : 2
+# Registers                                            : 22
+ 1-bit register                                        : 8
+ 32-bit register                                       : 10
+ 9-bit register                                        : 4
+# Comparators                                          : 53
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator greater                             : 6
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator greater                             : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator greater                             : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator greater                             : 2
+ 14-bit comparator lessequal                           : 2
+ 15-bit comparator greater                             : 2
+ 15-bit comparator lessequal                           : 2
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 2
+ 17-bit comparator greater                             : 2
+ 18-bit comparator greater                             : 2
+ 19-bit comparator greater                             : 2
+ 20-bit comparator greater                             : 2
+ 32-bit comparator equal                               : 2
+ 32-bit comparator greater                             : 5
+ 32-bit comparator lessequal                           : 2
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator greater                              : 2
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 360
+ 1-bit 2-to-1 multiplexer                              : 303
+ 11-bit 2-to-1 multiplexer                             : 6
+ 12-bit 2-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 37
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 8
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <op.y_step_11> in Unit <sine_comp_1> is equivalent to the following 20 FFs/Latches, which will be removed : <op.y_step_12> <op.y_step_13> <op.y_step_14> <op.y_step_15> <op.y_step_16> <op.y_step_17> <op.y_step_18> <op.y_step_19> <op.y_step_20> <op.y_step_21> <op.y_step_22> <op.y_step_23> <op.y_step_24> <op.y_step_25> <op.y_step_26> <op.y_step_27> <op.y_step_28> <op.y_step_29> <op.y_step_30> <op.y_step_31> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_0> in Unit <sine_comp_1> is equivalent to the following FF/Latch, which will be removed : <out_wave_0> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_1> in Unit <sine_comp_1> is equivalent to the following FF/Latch, which will be removed : <out_wave_1> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_2> in Unit <sine_comp_1> is equivalent to the following FF/Latch, which will be removed : <out_wave_2> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_3> in Unit <sine_comp_1> is equivalent to the following FF/Latch, which will be removed : <out_wave_3> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_4> in Unit <sine_comp_1> is equivalent to the following FF/Latch, which will be removed : <out_wave_4> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_5> in Unit <sine_comp_1> is equivalent to the following FF/Latch, which will be removed : <out_wave_5> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_6> in Unit <sine_comp_1> is equivalent to the following FF/Latch, which will be removed : <out_wave_6> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_7> in Unit <sine_comp_1> is equivalent to the following FF/Latch, which will be removed : <out_wave_7> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_8> in Unit <sine_comp_1> is equivalent to the following FF/Latch, which will be removed : <out_wave_8> 
+INFO:Xst:2261 - The FF/Latch <op.y_step_11> in Unit <sine_comp_2> is equivalent to the following 20 FFs/Latches, which will be removed : <op.y_step_12> <op.y_step_13> <op.y_step_14> <op.y_step_15> <op.y_step_16> <op.y_step_17> <op.y_step_18> <op.y_step_19> <op.y_step_20> <op.y_step_21> <op.y_step_22> <op.y_step_23> <op.y_step_24> <op.y_step_25> <op.y_step_26> <op.y_step_27> <op.y_step_28> <op.y_step_29> <op.y_step_30> <op.y_step_31> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_0> in Unit <sine_comp_2> is equivalent to the following FF/Latch, which will be removed : <out_wave_0> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_1> in Unit <sine_comp_2> is equivalent to the following FF/Latch, which will be removed : <out_wave_1> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_2> in Unit <sine_comp_2> is equivalent to the following FF/Latch, which will be removed : <out_wave_2> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_3> in Unit <sine_comp_2> is equivalent to the following FF/Latch, which will be removed : <out_wave_3> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_4> in Unit <sine_comp_2> is equivalent to the following FF/Latch, which will be removed : <out_wave_4> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_5> in Unit <sine_comp_2> is equivalent to the following FF/Latch, which will be removed : <out_wave_5> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_6> in Unit <sine_comp_2> is equivalent to the following FF/Latch, which will be removed : <out_wave_6> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_7> in Unit <sine_comp_2> is equivalent to the following FF/Latch, which will be removed : <out_wave_7> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_8> in Unit <sine_comp_2> is equivalent to the following FF/Latch, which will be removed : <out_wave_8> 
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 50
+ 11-bit adder                                          : 2
+ 11-bit adder carry in                                 : 20
+ 12-bit adder                                          : 2
+ 32-bit adder                                          : 5
+ 32-bit subtractor                                     : 3
+ 8-bit adder carry in                                  : 16
+ 9-bit subtractor                                      : 2
+# Registers                                            : 364
+ Flip-Flops                                            : 364
+# Comparators                                          : 53
+ 10-bit comparator lessequal                           : 2
+ 11-bit comparator greater                             : 6
+ 11-bit comparator lessequal                           : 2
+ 12-bit comparator greater                             : 2
+ 12-bit comparator lessequal                           : 2
+ 13-bit comparator greater                             : 2
+ 13-bit comparator lessequal                           : 2
+ 14-bit comparator greater                             : 2
+ 14-bit comparator lessequal                           : 2
+ 15-bit comparator greater                             : 2
+ 15-bit comparator lessequal                           : 2
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 2
+ 17-bit comparator greater                             : 2
+ 18-bit comparator greater                             : 2
+ 19-bit comparator greater                             : 2
+ 20-bit comparator greater                             : 2
+ 32-bit comparator equal                               : 2
+ 32-bit comparator greater                             : 5
+ 32-bit comparator lessequal                           : 2
+ 8-bit comparator lessequal                            : 2
+ 9-bit comparator greater                              : 2
+ 9-bit comparator lessequal                            : 2
+# Multiplexers                                         : 422
+ 1-bit 2-to-1 multiplexer                              : 367
+ 11-bit 2-to-1 multiplexer                             : 6
+ 12-bit 2-to-1 multiplexer                             : 2
+ 32-bit 2-to-1 multiplexer                             : 35
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 8
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <op.y_step_11> in Unit <sine_gen> is equivalent to the following 20 FFs/Latches, which will be removed : <op.y_step_12> <op.y_step_13> <op.y_step_14> <op.y_step_15> <op.y_step_16> <op.y_step_17> <op.y_step_18> <op.y_step_19> <op.y_step_20> <op.y_step_21> <op.y_step_22> <op.y_step_23> <op.y_step_24> <op.y_step_25> <op.y_step_26> <op.y_step_27> <op.y_step_28> <op.y_step_29> <op.y_step_30> <op.y_step_31> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_0> in Unit <sine_gen> is equivalent to the following FF/Latch, which will be removed : <out_wave_0> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_1> in Unit <sine_gen> is equivalent to the following FF/Latch, which will be removed : <out_wave_1> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_2> in Unit <sine_gen> is equivalent to the following FF/Latch, which will be removed : <out_wave_2> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_3> in Unit <sine_gen> is equivalent to the following FF/Latch, which will be removed : <out_wave_3> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_4> in Unit <sine_gen> is equivalent to the following FF/Latch, which will be removed : <out_wave_4> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_5> in Unit <sine_gen> is equivalent to the following FF/Latch, which will be removed : <out_wave_5> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_6> in Unit <sine_gen> is equivalent to the following FF/Latch, which will be removed : <out_wave_6> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_7> in Unit <sine_gen> is equivalent to the following FF/Latch, which will be removed : <out_wave_7> 
+INFO:Xst:2261 - The FF/Latch <op.y_val_8> in Unit <sine_gen> is equivalent to the following FF/Latch, which will be removed : <out_wave_8> 
+INFO:Xst:2261 - The FF/Latch <behav.final_tmp_0> in Unit <sine_top> is equivalent to the following FF/Latch, which will be removed : <final_out_0> 
+INFO:Xst:2261 - The FF/Latch <behav.final_tmp_1> in Unit <sine_top> is equivalent to the following FF/Latch, which will be removed : <final_out_1> 
+INFO:Xst:2261 - The FF/Latch <behav.final_tmp_2> in Unit <sine_top> is equivalent to the following FF/Latch, which will be removed : <final_out_2> 
+INFO:Xst:2261 - The FF/Latch <behav.final_tmp_3> in Unit <sine_top> is equivalent to the following FF/Latch, which will be removed : <final_out_3> 
+INFO:Xst:2261 - The FF/Latch <behav.final_tmp_4> in Unit <sine_top> is equivalent to the following FF/Latch, which will be removed : <final_out_4> 
+INFO:Xst:2261 - The FF/Latch <behav.final_tmp_5> in Unit <sine_top> is equivalent to the following FF/Latch, which will be removed : <final_out_5> 
+INFO:Xst:2261 - The FF/Latch <behav.final_tmp_6> in Unit <sine_top> is equivalent to the following FF/Latch, which will be removed : <final_out_6> 
+INFO:Xst:2261 - The FF/Latch <behav.final_tmp_7> in Unit <sine_top> is equivalent to the following FF/Latch, which will be removed : <final_out_7> 
+INFO:Xst:2261 - The FF/Latch <behav.final_tmp_8> in Unit <sine_top> is equivalent to the following FF/Latch, which will be removed : <final_out_8> 
+
+Optimizing unit <sine_top> ...
+
+Optimizing unit <sine_gen> ...
+WARNING:Xst:1293 - FF/Latch <op.n_steps_31> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_30> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_29> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_28> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_27> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_26> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_25> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_24> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_23> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_22> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_21> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_20> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_19> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_18> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_17> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_16> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_15> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_14> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_13> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_12> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_11> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_10> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_9> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <op.n_steps_8> has a constant value of 0 in block <sine_gen>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <div_8u_8u> ...
+
+Optimizing unit <div_11s_9s> ...
+WARNING:Xst:1293 - FF/Latch <behav.counter_6> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_7> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_8> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_9> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_10> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_11> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_12> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_13> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_14> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_15> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_16> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_17> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_18> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_19> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_20> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_21> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_22> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_23> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_24> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_25> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_26> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_27> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_28> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_29> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_30> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_31> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sine_comp_2/op.y_step_11> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sine_comp_2/op.y_step_10> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sine_comp_1/op.y_step_11> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sine_comp_1/op.y_step_10> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_5> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_6> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_7> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_8> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_9> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_10> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_11> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_12> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_13> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_14> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_15> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_16> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_17> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_18> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_19> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_20> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_21> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_22> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_23> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_24> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_25> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_26> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_27> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_28> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_29> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_30> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <behav.n_runs_31> (without init value) has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_2> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_3> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_4> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <behav.counter_5> has a constant value of 0 in block <sine_top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <sine_comp_1/op.y_val_31> in Unit <sine_top> is equivalent to the following 23 FFs/Latches, which will be removed : <sine_comp_1/op.y_val_30> <sine_comp_1/op.y_val_29> <sine_comp_1/op.y_val_28> <sine_comp_1/op.y_val_27> <sine_comp_1/op.y_val_26> <sine_comp_1/op.y_val_25> <sine_comp_1/op.y_val_24> <sine_comp_1/op.y_val_23> <sine_comp_1/op.y_val_22> <sine_comp_1/op.y_val_21> <sine_comp_1/op.y_val_20> <sine_comp_1/op.y_val_19> <sine_comp_1/op.y_val_18> <sine_comp_1/op.y_val_17> <sine_comp_1/op.y_val_16> <sine_comp_1/op.y_val_15> <sine_comp_1/op.y_val_14> <sine_comp_1/op.y_val_13> <sine_comp_1/op.y_val_12> <sine_comp_1/op.y_val_11> <sine_comp_1/op.y_val_10> <sine_comp_1/op.y_val_9> <sine_comp_1/op.y_val_8> 
+INFO:Xst:2261 - The FF/Latch <sine_comp_2/op.y_val_31> in Unit <sine_top> is equivalent to the following 23 FFs/Latches, which will be removed : <sine_comp_2/op.y_val_30> <sine_comp_2/op.y_val_29> <sine_comp_2/op.y_val_28> <sine_comp_2/op.y_val_27> <sine_comp_2/op.y_val_26> <sine_comp_2/op.y_val_25> <sine_comp_2/op.y_val_24> <sine_comp_2/op.y_val_23> <sine_comp_2/op.y_val_22> <sine_comp_2/op.y_val_21> <sine_comp_2/op.y_val_20> <sine_comp_2/op.y_val_19> <sine_comp_2/op.y_val_18> <sine_comp_2/op.y_val_17> <sine_comp_2/op.y_val_16> <sine_comp_2/op.y_val_15> <sine_comp_2/op.y_val_14> <sine_comp_2/op.y_val_13> <sine_comp_2/op.y_val_12> <sine_comp_2/op.y_val_11> <sine_comp_2/op.y_val_10> <sine_comp_2/op.y_val_9> <sine_comp_2/op.y_val_8> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block sine_top, actual ratio is 4.
+FlipFlop en_1 has been replicated 2 time(s)
+FlipFlop en_2 has been replicated 2 time(s)
+FlipFlop sine_comp_1/op.first_sig has been replicated 1 time(s)
+FlipFlop sine_comp_2/op.first_sig has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 148
+ Flip-Flops                                            : 148
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : sine_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1728
+#      GND                         : 1
+#      INV                         : 52
+#      LUT1                        : 114
+#      LUT2                        : 91
+#      LUT3                        : 78
+#      LUT4                        : 84
+#      LUT5                        : 292
+#      LUT6                        : 324
+#      MUXCY                       : 378
+#      MUXF7                       : 8
+#      VCC                         : 1
+#      XORCY                       : 305
+# FlipFlops/Latches                : 148
+#      FD                          : 113
+#      FDE                         : 25
+#      FDRE                        : 8
+#      FDSE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 40
+#      IBUF                        : 31
+#      OBUF                        : 9
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45tfgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             148  out of  54576     0%  
+ Number of Slice LUTs:                 1035  out of  27288     3%  
+    Number used as Logic:              1035  out of  27288     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1044
+   Number with an unused Flip Flop:     896  out of   1044    85%  
+   Number with an unused LUT:             9  out of   1044     0%  
+   Number of fully used LUT-FF pairs:   139  out of   1044    13%  
+   Number of unique control sets:         9
+
+IO Utilization: 
+ Number of IOs:                          41
+ Number of bonded IOBs:                  41  out of    296    13%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 148   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.937ns (Maximum Frequency: 144.153MHz)
+   Minimum input arrival time before clock: 57.898ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.937ns (frequency: 144.153MHz)
+  Total number of paths / destination ports: 187975 / 156
+-------------------------------------------------------------------------
+Delay:               6.937ns (Levels of Logic = 22)
+  Source:            sine_comp_2/op.n_steps_2 (FF)
+  Destination:       sine_comp_2/op.y_val_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: sine_comp_2/op.n_steps_2 to sine_comp_2/op.y_val_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   1.028  sine_comp_2/op.n_steps_2 (sine_comp_2/op.n_steps_2)
+     LUT5:I0->O            1   0.203   0.000  sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_lut<0> (sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<0> (sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<1> (sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<2> (sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<3> (sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<4> (sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<5> (sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<5>)
+     MUXCY:CI->O          58   0.019   1.601  sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<6> (sine_comp_2/Mcompar_GND_5_o_op.n_steps[31]_LessThan_5_o_cy<6>)
+     LUT6:I5->O            2   0.205   0.845  sine_comp_2/Mmux_op.counter[31]_GND_5_o_mux_28_OUT23 (sine_comp_2/op.counter[31]_GND_5_o_mux_28_OUT<2>)
+     LUT6:I3->O            1   0.205   0.000  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_lut<0> (sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<0> (sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<1> (sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<2> (sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<3> (sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<4> (sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<5> (sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<6> (sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<7> (sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<8> (sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<9> (sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<9>)
+     MUXCY:CI->O          43   0.019   1.449  sine_comp_2/Mcompar_op.n_steps[31]_op.counter[31]_equal_32_o_cy<10> (sine_comp_2/op.n_steps[31]_op.counter[31]_equal_32_o)
+     LUT6:I5->O            1   0.205   0.000  sine_comp_2/Mmux_op.y_val[31]_GND_5_o_mux_32_OUT2 (sine_comp_2/op.y_val[31]_GND_5_o_mux_32_OUT<0>)
+     FD:D                      0.102          sine_comp_2/op.y_val_0
+    ----------------------------------------
+    Total                      6.937ns (2.015ns logic, 4.922ns route)
+                                       (29.0% logic, 71.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 766522473423667 / 184
+-------------------------------------------------------------------------
+Offset:              57.898ns (Levels of Logic = 50)
+  Source:            freq_2<3> (PAD)
+  Destination:       sine_comp_2/op.y_step_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: freq_2<3> to sine_comp_2/op.y_step_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.222   1.394  freq_2_3_IBUF (freq_2_3_IBUF)
+     LUT5:I0->O            9   0.203   1.174  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<7>121 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<7>12)
+     LUT6:I1->O            2   0.203   0.864  sine_comp_2/f_sample[7]_f_sine[7]_div_1/Mmux_a[0]_GND_6_o_MUX_99_o161 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/a[6]_GND_6_o_MUX_93_o)
+     LUT6:I2->O           17   0.203   1.392  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<5>12 (sine_comp_2/f_sample[7]_f_sine[7]_div_1_OUT<5>)
+     LUT6:I0->O            2   0.203   0.981  sine_comp_2/f_sample[7]_f_sine[7]_div_1/Mmux_a[0]_GND_6_o_MUX_125_o161 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/a[6]_GND_6_o_MUX_119_o)
+     LUT6:I0->O            4   0.203   0.788  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<4>2 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/Madd_GND_6_o_b[7]_add_9_OUT_Madd_Madd_cy<6>)
+     LUT5:I3->O            5   0.203   1.079  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<4>11 (sine_comp_2/f_sample[7]_f_sine[7]_div_1_OUT<4>)
+     LUT6:I0->O            2   0.203   0.981  sine_comp_2/f_sample[7]_f_sine[7]_div_1/Mmux_a[0]_GND_6_o_MUX_149_o151 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/a[5]_GND_6_o_MUX_144_o)
+     LUT6:I0->O            5   0.203   0.962  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<3>1 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/Madd_GND_6_o_b[7]_add_11_OUT_Madd_Madd_cy<5>)
+     LUT6:I2->O           28   0.203   1.599  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<3>11 (sine_comp_2/f_sample[7]_f_sine[7]_div_1_OUT<3>)
+     LUT6:I0->O            2   0.203   0.981  sine_comp_2/f_sample[7]_f_sine[7]_div_1/Mmux_a[0]_GND_6_o_MUX_171_o141 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/a[4]_GND_6_o_MUX_167_o)
+     LUT6:I0->O            1   0.203   0.808  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<2>1 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<2>1)
+     LUT3:I0->O            1   0.205   0.684  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<2>24_SW0 (N378)
+     LUT6:I4->O           29   0.203   1.594  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<2>24 (sine_comp_2/f_sample[7]_f_sine[7]_div_1_OUT<2>)
+     LUT5:I0->O            2   0.203   0.981  sine_comp_2/f_sample[7]_f_sine[7]_div_1/Mmux_a[0]_GND_6_o_MUX_191_o131 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/a[3]_GND_6_o_MUX_188_o)
+     LUT6:I0->O            1   0.203   0.827  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<1>3 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<1>1)
+     LUT5:I1->O            9   0.203   0.830  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<1>1 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<1>2)
+     LUT6:I5->O            3   0.205   0.879  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<1>21 (sine_comp_2/f_sample[7]_f_sine[7]_div_1_OUT<1>)
+     LUT6:I3->O            1   0.205   0.580  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<0>4 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<0>4)
+     LUT6:I5->O            2   0.205   0.864  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<0>6 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<0>1)
+     LUT6:I2->O            1   0.203   0.000  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<0>1_G (N431)
+     MUXF7:I1->O           6   0.140   1.109  sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<0>1 (sine_comp_2/f_sample[7]_f_sine[7]_div_1/o<0>2)
+     LUT6:I0->O           15   0.203   1.086  sine_comp_2/Mmux_GND_5_o_f_sample[7]_mux_2_OUT1 (sine_comp_2/GND_5_o_GND_5_o_div_3/Madd_GND_7_o_b[8]_add_17_OUT_Madd_Madd_lut<5>)
+     LUT6:I4->O            2   0.203   0.961  sine_comp_2/GND_5_o_GND_5_o_div_3/Mmux_a[10]_GND_7_o_MUX_382_o121 (sine_comp_2/GND_5_o_GND_5_o_div_3/a[10]_GND_7_o_MUX_384_o)
+     LUT6:I1->O            4   0.203   0.788  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0005_INV_337_o12 (sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0005_INV_337_o11)
+     LUT5:I3->O            2   0.203   0.981  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0005_INV_337_o13 (sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0005_INV_337_o)
+     LUT6:I0->O            3   0.203   1.015  sine_comp_2/GND_5_o_GND_5_o_div_3/Mmux_a[10]_GND_7_o_MUX_398_o111 (sine_comp_2/GND_5_o_GND_5_o_div_3/a[10]_GND_7_o_MUX_399_o)
+     LUT6:I0->O            2   0.203   0.864  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0006_INV_336_o1_SW0 (N224)
+     LUT6:I2->O           16   0.203   1.369  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0006_INV_336_o1 (sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0006_INV_336_o)
+     LUT6:I0->O            4   0.203   1.028  sine_comp_2/GND_5_o_GND_5_o_div_3/Mmux_a[10]_GND_7_o_MUX_413_o111 (sine_comp_2/GND_5_o_GND_5_o_div_3/a[10]_GND_7_o_MUX_414_o)
+     LUT6:I1->O            3   0.203   0.898  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0007_INV_335_o23_SW0 (N382)
+     LUT6:I2->O           13   0.203   1.277  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0007_INV_335_o23 (sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0007_INV_335_o)
+     LUT5:I0->O            3   0.203   0.879  sine_comp_2/GND_5_o_GND_5_o_div_3/Mmux_a[10]_GND_7_o_MUX_427_o131 (sine_comp_2/GND_5_o_GND_5_o_div_3/a[10]_GND_7_o_MUX_430_o)
+     LUT6:I3->O            1   0.205   0.827  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0008_INV_334_o1_SW1 (N230)
+     LUT6:I2->O           10   0.203   1.104  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0008_INV_334_o1 (sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0008_INV_334_o2)
+     LUT6:I2->O            7   0.203   1.118  sine_comp_2/GND_5_o_GND_5_o_div_3/Mmux_a[10]_GND_7_o_MUX_440_o131 (sine_comp_2/GND_5_o_GND_5_o_div_3/a[10]_GND_7_o_MUX_443_o)
+     LUT5:I0->O            1   0.203   0.827  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0009_INV_333_o1_SW1 (N227)
+     LUT6:I2->O            5   0.203   0.715  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0009_INV_333_o1 (sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0009_INV_333_o2)
+     LUT5:I4->O           27   0.205   1.449  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0009_INV_333_o21 (sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0009_INV_333_o)
+     LUT3:I0->O            3   0.205   0.995  sine_comp_2/GND_5_o_GND_5_o_div_3/Mmux_n0525101 (sine_comp_2/GND_5_o_GND_5_o_div_3/n0525<8>)
+     LUT6:I1->O            2   0.203   0.961  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0010_INV_332_o22 (sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0010_INV_332_o21)
+     LUT6:I1->O           28   0.203   1.579  sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0010_INV_332_o26 (sine_comp_2/GND_5_o_GND_5_o_div_3/BUS_0010_INV_332_o)
+     LUT5:I0->O            2   0.203   0.961  sine_comp_2/GND_5_o_GND_5_o_div_3/Mmux_n0529101 (sine_comp_2/GND_5_o_GND_5_o_div_3/n0529<8>)
+     LUT5:I0->O            0   0.203   0.000  sine_comp_2/GND_5_o_GND_5_o_div_3/Mcompar_BUS_0011_INV_331_o_lutdi3 (sine_comp_2/GND_5_o_GND_5_o_div_3/Mcompar_BUS_0011_INV_331_o_lutdi3)
+     MUXCY:DI->O           3   0.339   0.651  sine_comp_2/GND_5_o_GND_5_o_div_3/Mcompar_BUS_0011_INV_331_o_cy<3> (sine_comp_2/GND_5_o_GND_5_o_div_3/Mcompar_BUS_0011_INV_331_o_cy<3>)
+     LUT6:I5->O            9   0.205   1.174  sine_comp_2/GND_5_o_GND_5_o_div_3/Mcompar_BUS_0011_INV_331_o_cy<4> (sine_comp_2/GND_5_o_GND_5_o_div_3_OUT<1>)
+     LUT5:I0->O            2   0.203   0.961  sine_comp_2/GND_5_o_GND_5_o_div_3/Mmux_n048391 (sine_comp_2/GND_5_o_GND_5_o_div_3/n0483<7>)
+     LUT5:I0->O            0   0.203   0.000  sine_comp_2/GND_5_o_GND_5_o_div_3/Mcompar_BUS_0012_INV_330_o_lutdi3 (sine_comp_2/GND_5_o_GND_5_o_div_3/Mcompar_BUS_0012_INV_330_o_lutdi3)
+     MUXCY:DI->O           1   0.339   0.580  sine_comp_2/GND_5_o_GND_5_o_div_3/Mcompar_BUS_0012_INV_330_o_cy<3> (sine_comp_2/GND_5_o_GND_5_o_div_3/Mcompar_BUS_0012_INV_330_o_cy<3>)
+     LUT3:I2->O            1   0.205   0.000  sine_comp_2/GND_5_o_GND_5_o_div_3/Mcompar_BUS_0012_INV_330_o_cy<4> (sine_comp_2/GND_5_o_GND_5_o_div_3_OUT<0>)
+     FDE:D                     0.102          sine_comp_2/op.y_step_0
+    ----------------------------------------
+    Total                     57.898ns (11.498ns logic, 46.400ns route)
+                                       (19.9% logic, 80.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            behav.final_tmp_8 (FF)
+  Destination:       final_out<8> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: behav.final_tmp_8 to final_out<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  behav.final_tmp_8 (behav.final_tmp_8)
+     OBUF:I->O                 2.571          final_out_8_OBUF (final_out<8>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.937|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.34 secs
+ 
+--> 
+
+Total memory usage is 231808 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   86 (   0 filtered)
+Number of infos    :   41 (   0 filtered)
+

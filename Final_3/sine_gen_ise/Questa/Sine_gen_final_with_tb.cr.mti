@@ -1,0 +1,29 @@
+E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/Sine_tb.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/Sine_tb.vhd
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 18 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Sine_tb
+-- Compiling architecture behavior of Sine_tb
+
+} {} {}} E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_gen.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_gen.vhd
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 18 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sine_gen
+-- Compiling architecture behav of sine_gen
+
+} {} {}} E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_top.vhd {2 {vcom -work work -2002 -explicit -vopt -stats=none E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_top.vhd
+QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 18 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sine_top
+-- Compiling architecture Behavioral of sine_top
+** Warning: E:/ITI_references/Digital_IC_course/FPGA_prototype/Project/Final_3/sine_gen_ise/Questa/sine_top.vhd(97): (vcom-1013) Initial value of "n_runs" depends on value of signal "n_waves".
+
+} {} {}}
